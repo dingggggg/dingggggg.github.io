@@ -12,7 +12,7 @@
     </div>
 </body>
 <script>
-    $.get("../md/getHeights.md", function(response, status, xhr){
+    $.get("../md/markdown.md", function(response, status, xhr){
         console.log(response);
         $("#content").html(marked(response));
     });
