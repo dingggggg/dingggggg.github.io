@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../css/github-markdown.css"/>
     <script src="../js/markdown.js"></script>
     <script src="../js/jquery.min.js"></script>
+
     <style>
         body {
             box-sizing: border-box;
@@ -18,20 +19,18 @@
 </head>
 <body>
 
-<article id="preview" class="markdown-body">
+    <article id="preview" class="markdown-body">
 
-</article>
-
+    </article>
 </body>
 <script>
     var preview = $('#preview');
 
-    $.get("../md/markdown.md", function (response, status, xhr) {
+    $.get("../md/centerMethods.md", function (response, status, xhr) {
         var result = markdown.toHTML(response);
         console.log(result);
         preview.html(result);
     });
-
 </script>
 
 </html>
