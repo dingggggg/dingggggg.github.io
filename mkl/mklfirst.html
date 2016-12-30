@@ -14,7 +14,7 @@
 <script>
     $.get("../md/markdown.md", function(response, status, xhr){
         console.log(response);
-        $("#content").html(marked(response));
+        $("#content").html(response);
     });
 </script>
 </html>
