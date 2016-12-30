@@ -2,8 +2,8 @@
 
 ## 先写一个简单的directive
 
-	var myApp = angular.module('myApp', [])
-		.directive('myDirective', function() {
+	var myApp = angular.module('myApp', []);
+	myApp.directive('myDirective', function() {
 		return {
 			restrict: 'A',
 			replace: true,
