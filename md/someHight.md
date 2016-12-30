@@ -31,7 +31,6 @@ ng-repeat有六个特殊属性，分别为
 * $even(Boolean)：当$index值是偶数时值为true。
 * $odd(Boolean)：当$index值是奇数时值为true。
 
-
 	<table>
 			<tr>
 				<td>日期</td>
