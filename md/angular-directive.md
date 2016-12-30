@@ -4,16 +4,14 @@
 
 ## 先写一个简单的directive
 
-```
-var myApp = angular.module('myApp', [])
-    .directive('myDirective', function() {
-    return {
-        restrict: 'A',
-        replace: true,
-        template: '<p>wojiaoleijiawei</p>'
-    };
-})
-```
+	var myApp = angular.module('myApp', [])
+		.directive('myDirective', function() {
+		return {
+			restrict: 'A',
+			replace: true,
+			template: '<p>wojiaoleijiawei</p>'
+		};
+	})
 
 directive接受两个参数
 * name：字符串，指令的名字
@@ -24,12 +22,10 @@ directive接受两个参数
 ### restrict
 该属性定义指令以什么形式被使用，默认为A。四中形式分别为元素E,属性A，类C，注释M。代码示例如下。
 
-```
-  <my-directive></my-directive>
-  <div my-directive>
-  <div class="my-directive">
-  <--directive:my-directive-->
-```
+	<my-directive></my-directive>
+	<div my-directive>
+	<div class="my-directive">
+	<--directive:my-directive-->
 
 ### priority(Number)
 也就是优先级，默认为0。<br>
@@ -61,27 +57,26 @@ false反之。
 
 ### controller（String/function）
 控制器也可以在指令里定义，比如:
-```
-.directive('myDirective', function() {
-    restrict: 'A',
-    controller: function($scope, $element, $attrs) {
-    //...
-})
-```
+
+	.directive('myDirective', function() {
+		restrict: 'A',
+		controller: function($scope, $element, $attrs) {
+		//...
+	})
 
 ### controllerAs (String)
 
 可以从名字和类型看出，这个选项是用来设置控制器的别名的。<br>
 比如这样:
-```
-directive('myDirective', function() {
-    return {
-        restrict: 'A',
-        template: '<p>{{ myController.name }}</p>',
-        controllerAs: 'myController',
-        controller: function() {
-            this.name = "leijiawei"
-        }
-    };
-});
-```
+
+	directive('myDirective', function() {
+		return {
+			restrict: 'A',
+			template: '<p>{{ myController.name }}</p>',
+			controllerAs: 'myController',
+			controller: function() {
+				this.name = "leijiawei"
+			}
+		};
+	});
+
