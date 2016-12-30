@@ -21,7 +21,7 @@
     var preview = $('#preview');
     //    var parser = new HyperDown;
     //    console.log(parser);
-    $.get("../md/markdown.md", function (response, status, xhr) {
+    $.get("../md/centerMethods.md", function (response, status, xhr) {
         var result = markdown.toHTML(response);
         console.log(result);
         preview.html(result);
