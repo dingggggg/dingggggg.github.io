@@ -3,18 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../js/marked.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/github-markdown.css"/>
+    <script src="../js/markdown.js"></script>
     <script src="../js/jquery.min.js"></script>
+    <style>
+
+    </style>
 </head>
 <body>
-    <div id="content">
 
-    </div>
+<div id="preview" class="markdown-body">
+
+</div>
+<!--<xmp theme="united" style="display:none;">-->
+<!--# haha-->
+<!--</xmp>-->
 </body>
 <script>
-    $.get("../md/markdown.md", function(response, status, xhr){
-        console.log(response);
-        $("#content").html(response);
+    var preview = $('#preview');
+    //    var parser = new HyperDown;
+    //    console.log(parser);
+    $.get("../md/markdown.md", function (response, status, xhr) {
+        var result = markdown.toHTML(response);
+        console.log(result);
+        preview.html(result);
     });
+
+
+    //
+    //    var md = window.markdownit();
+    //    console.log(md);
+    //    var result = md.render('# markdown-it rulezz!');
+    //    console.log(typeof (result));
+    //    preview.innerHTML(result);
+
 </script>
+
 </html>
