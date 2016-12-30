@@ -1,7 +1,5 @@
 # angular学习日记之directive
 
----
-
 ## 先写一个简单的directive
 
 	var myApp = angular.module('myApp', [])
