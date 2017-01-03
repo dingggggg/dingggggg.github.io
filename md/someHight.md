@@ -23,7 +23,9 @@
 ng-repeat指令用于循环输出指定次数的HTML元素，集合必须是数组或对象。
 
 ## ng-repeat进阶使用
+
 ng-repeat有六个特殊属性，分别为
+
 * $index(Number)：遍历次数（从0开始）。
 * $first(Boolean):当元素是遍历的第一个时值为true。
 * $middle(Boolean)：当元素处于第一个和后元素之间时值为true

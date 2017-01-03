@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>getHeights</title>
     <link rel="stylesheet" type="text/css" href="../css/github-markdown.css"/>
     <script src="../js/markdown.js"></script>
     <script src="../js/jquery.min.js"></script>
+
     <style>
         body {
             box-sizing: border-box;
@@ -21,17 +22,16 @@
 <article id="preview" class="markdown-body">
 
 </article>
-2016.12.27
+2017.1.3
 </body>
 <script>
     var preview = $('#preview');
 
-    $.get("../md/markdown.md", function (response, status, xhr) {
+    $.get("../md/ngClass.md", function (response, status, xhr) {
         var result = markdown.toHTML(response);
         console.log(result);
         preview.html(result);
     });
-
 </script>
 
 </html>
