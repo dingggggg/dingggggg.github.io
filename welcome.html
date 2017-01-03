@@ -1,99 +1,177 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<style>
-			body{
-				background: url(img/back.jpg) 0 0 no-repeat #fff fixed;
-				background-size: cover;
-				display: block;
-				color: #909B99;
-				font: 14px/1.5 "Microsoft Yahei";
-			}
-			ul,ol,li{
-				list-style: none;
-			}
-			a{
-				text-decoration: none;
-				color: #A5B8B9;
-			}
-			.header{
-				width: 100%;
-				height:50px;
-				background-color: rgba(0,0,0,0.8);
-				position: fixed;
-				top:0;
-				left: 0;
-				z-index: 11111;
-				padding: 0 20px;
-				overflow-x: hidden;
-				display: block;
-			}
-			.logo{
-				float: left;
-				background-size: auto;
-			}
-			.myLogo{
-				opacity: 0.8;
-			}
-			.nav{
-				float: right;
-				padding-right: 150px;
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            margin: 0px;
+            background: url(img/back.jpg) 0 0 no-repeat #fff fixed;
+            background-size: cover;
+            display: block;
+            color: #909B99;
+            font: 14px/1.5 "Microsoft Yahei";
+        }
 
-			}
-			.nav ul li{
-				/*position: relative;*/
-				padding: 0px 20px;
-				float: left;
-				/*margin-top: 8px;*/
-			}
-			.imajs{
-				padding-top: 110px;
-				height: 200px;
-				color: #1BB4D6;
-				text-align: center;
-			}
-			.imajs h1{
-				font-size: 18px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="header">
-			<div class="logo">
+        ul, ol, li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #A5B8B9;
+        }
+
+        .header {
+            width: 100%;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 11111;
+            padding: 0 20px;
+            overflow-x: hidden;
+            display: block;
+        }
+
+        .logo {
+            float: left;
+            background-size: auto;
+        }
+
+        .myLogo {
+            opacity: 0.8;
+        }
+
+        .nav {
+            float: right;
+            padding-right: 150px;
+
+        }
+
+        .nav ul li {
+            /*position: relative;*/
+            padding: 0px 20px;
+            float: left;
+            /*margin-top: 8px;*/
+        }
+
+        .imajs {
+            padding-top: 110px;
+            height: 190px;
+            color: #1BB4D6;
+            text-align: center;
+        }
+
+        .imajs h1 {
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        .content1 {
+            margin: 0;
+            height: 476px;
+            border-top: 1px solid rgba(48, 211, 194, 0.55);
+            background-color: rgba(48, 211, 194, 0.25);
+            border-bottom: 1px solid rgba(48, 211, 194, 0.55);
+        }
+
+        .content1-box {
+            width: 1200px;
+            height: 476px;
+            margin: 0px auto;
+        }
+
+        .content1-left {
+            width: 919px;
+            height: 476px;
+            border-left: 1px solid rgba(16, 18, 19, 0.27);
+            float: left;
+            margin: 0 auto;
+        }
+
+        .content1-right {
+            width: 278px;
+            border-left: 1px solid rgba(16, 18, 19, 0.27);
+            border-right: 1px solid rgba(16, 18, 19, 0.27);
+            background: rgba(216, 93, 239, 0.11);
+            height: 475px;
+            float: right;
+        }
+
+        .myArt {
+            height: 50px;
+            line-height: 50px;
+            width: 80%;
+            text-align: center;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="logo">
 				<!--<img src="" class="myLogo" width="160px" height="50px">-->
 			</div>
-			<div class="header_right">
-				<div class="nav">
-					<ul>
-						<li><a href="" id="index">首页</a></li>
-						<li><a href="" id="study">学习日记</a></li>
-						<li><a href="" id="about">关于</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="imajs">
-			<h1>i am a JSer</h1>
-			<h1>博客建设中！</h1>
-		</div>
-		<div class="content">
-		<a href="angularLearn/angular-directive.html">angular学习日记--directive</a>
-		<a href="mkl/mklfirst.html">markdown学习日记1</a>
-		<a href="jsl/cm.html">js居中的数种方法</a>
-		<a href="jsl/getHeights.html">html获取屏幕页面浏览器高度</a>
-		<a href="angularLearn/someHight.html">angular学习日记--ng-repeat</a>
-		</div>
-	</body>
-	<script>
-//			var links = document.all.tags("A");
-			console.log(document);
-//			var total = links.length
-//			var win2 = window.open("", "", "menubar,scrollbars,toolbar")
-//			win2.document.write("<font size='2'>一共有" + total + "个连接</font><br>")
-//				for(i = 0; i < total; i++) {
-//					win2.document.write("<font size='2'>" + links[i].outerHTML + "</font><br>")
+    <div class="header_right">
+        <div class="nav">
+            <ul>
+                <li><a href="" id="index">首页</a></li>
+                <li><a href="" id="study">学习日记</a></li>
+                <li><a href="" id="about">关于</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="imajs">
+    <h1>前端的同学们加油!</h1>
+    <h1>wo are ont only a jser</h1>
+    <h1>this is not only a blog</h1>
+</div>
+<div class="content1">
+    <div class="content1-box">
 
-	</script>
+
+        <div class="content1-left">
+            <div class="myArt">
+                <a  href="angularLearn/angular-directive.html#preview">angular学习日记--directive</a>
+
+            </div>
+            <div class="myArt">
+                <a  href="mkl/mklfirst.html">markdown学习日记1</a>
+
+            </div>
+            <div class="myArt">
+                <a  href="jsl/cm.html">js居中的数种方法</a>
+
+            </div>
+            <div class="myArt">
+                <a  href="jsl/getHeights.html">html获取屏幕页面浏览器高度</a>
+
+            </div>
+            <div class="myArt">
+                <a  href="angularLearn/someHight.html">angular学习日记--ng-repeat</a>
+
+            </div>
+        </div>
+        <div class="content1-right">
+
+        </div>
+    </div>
+</div>
+<div class="content2">
+
+</div>
+</body>
+<script>
+    //			var links = document.all.tags("A");
+    console.log(document);
+    //			var total = links.length
+    //			var win2 = window.open("", "", "menubar,scrollbars,toolbar")
+    //			win2.document.write("<font size='2'>一共有" + total + "个连接</font><br>")
+    //				for(i = 0; i < total; i++) {
+    //					win2.document.write("<font size='2'>" + links[i].outerHTML + "</font><br>")
+
+</script>
 </html>
