@@ -11,7 +11,7 @@
 
     angular.element().style.backgroundColor='red';
 
-在angular里<b style='color:red'>不推荐</b>这种方式，angular不推荐直接操作DOM节点。
+在angular里不推荐这种方式，angular不推荐直接操作DOM节点。
 
 2.通过变量绑定
 
