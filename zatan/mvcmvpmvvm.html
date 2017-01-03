@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MVC，MVP 和 MVVM 的图示</title>
+    <link rel="stylesheet" type="text/css" href="../css/github-markdown.css"/>
+    <script src="../js/markdown.js"></script>
+    <script src="../js/jquery.min.js"></script>
+
+    <style>
+        body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+        }
+    </style>
+</head>
+<body>
+
+<article id="preview" class="markdown-body">
+
+</article>
+2017.1.3
+</body>
+<script>
+    var preview = $('#preview');
+
+    $.get("../md/mvcmvpmvvm.md", function (response, status, xhr) {
+        var result = markdown.toHTML(response);
+        console.log(result);
+        preview.html(result);
+    });
+</script>
+
+</html>
