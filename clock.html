@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			@keyframes circle {
+				from {
+					transform: rotate(0deg);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+			
+			#clock {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 200px;
+				height: 200px;
+				border: 20px solid rgba(28, 32, 33, 0.45);
+				border-radius: 120px;
+			}
+			
+			.smCircle {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-left: -5px;
+				margin-top: -5px;
+				border: 5px solid red;
+				border-radius: 5px;
+			}
+			
+			.miCircle {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				/*transform: translate(-50%, -50%);*/
+				margin-left: -10px;
+				margin-top: -10px;
+				border: 10px solid blue;
+				border-radius: 10px;
+				margin-top: -120px;
+				transform-origin: center 120px;
+				animation-name: circle;
+				animation-duration: 30s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+			
+			#hour {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				height: 60px;
+				border: 5px solid rgba(28, 32, 33, 0.45);
+				border-radius: 5px;
+				margin-left: -5px;
+				margin-top: -55px;
+				transform-origin: center 55px;
+				animation-name: hourCircle;
+				animation-duration: 43200s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+			
+			#minute {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				height: 80px;
+				border: 5px solid rgba(28, 32, 33, 0.45);
+				border-radius: 5px;
+				margin-left: -5px;
+				margin-top: -75px;
+				transform-origin: center 75px;
+				animation-name: minuteCircle;
+				animation-duration: 3600s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="clock">
+			<div class="smCircle">
+
+			</div>
+			<div class="miCircle">
+
+			</div>
+			<div id="hour">
+
+			</div>
+			<div id="minute">
+
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var date = new Date();
+		console.log(date);
+		var hours = date.getHours();
+		var minutes = date.getMinutes();
+		var second = date.getSeconds();
+		console.log(hours)
+		console.log(minutes)
+		console.log(second)
+
+		var hour = document.getElementById('hour');
+		var minute = document.getElementById('minute');
+		var degMinute = minutes * 6;
+		var degHour = hours * 30 + (minutes / 60) * 5;
+		var lastDegMinute = degMinute - 360;
+		var lastDegHour = degHour - 360;
+
+		console.log(lastDegMinute);
+		console.log(degHour);
+
+		creatKey(degHour, degMinute);
+
+		function creatKey(degHour, degMinute) {
+			var hourRule = "@-webkit-keyframes hourCircle{0% {transform:rotate(" + degHour + "deg);}\n" +
+				"100%{transform:rotate(360deg);}}";
+
+			var minuteRule = "@-webkit-keyframes minuteCircle{0% {transform:rotate(" + degMinute + "deg);}\n" +
+				"100%{transform:rotate(360deg);}}";
+
+			var style = document.createElement('style');
+			style.type = 'text/css';
+			style.innerHTML = '';
+			document.getElementsByTagName('head')[0].appendChild(style);
+			this.stylesheet = document.styleSheets[document.styleSheets.length - 1];
+
+			try {
+				this.stylesheet.insertRule(hourRule, this.stylesheet.rules.length);
+				this.stylesheet.insertRule(minuteRule, this.stylesheet.rules.length);
+			} catch(e) {};
+		}
+
+		var time = setInterval(function() {
+			var dateg = new Date();
+			var m = dateg.getMinutes();
+			if(m === 59) {
+				degHour = 0;
+				creatKey(degHour, degMinute);
+			}
+		}, 1000);
+	</script>
+
+</html>
